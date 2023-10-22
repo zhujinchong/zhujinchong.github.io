@@ -14,7 +14,8 @@ git init
 git add -A
 git commit -m 'add'
 
-git push -f https://github.com/mingriyingying.github.io.git master
 # git push -f git@github.com:你的git名/你的git项目名.git master:你的git分支
+git push -f git@github.com:mingriyingying/mingriyingying.github.io.git master
+
 
 cd -
