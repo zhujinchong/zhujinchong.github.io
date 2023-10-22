@@ -4,11 +4,11 @@ export default {
     // base: "/notes/", // 根目录
     themeConfig: {
         // 导航栏左侧：logo和title
-        logo: "/home.svg",
+        logo: "/vitepress/home.svg",
         siteTitle: "Home",
         // 导航栏右侧：菜单
         nav: [
-            { text: "博客", link: "/articles/" },
+            { text: "博客", link: "/blog/" },
             { text: "Java", link: "/java/" }
         ],
         // 导航栏最右侧：社交链接
@@ -17,24 +17,12 @@ export default {
         ],
         // 侧边栏：首页不要侧边栏；特定页面才有的侧边栏
         sidebar: {
-            "/articles/": [
+            "/blog/": [
                 {
-                    text: "组件库源码实现",
+                    text: "Test",
                     items: [
-                        {
-                            text: "组件库环境搭建",
-                            link: "/articles/组件库环境搭建",
-                        },
-                        { text: "gulp的使用", link: "/articles/gulp的使用" },
-                    ],
-                },
-                {
-                    text: "vue教程",
-                    items: [
-                        {
-                            text: "pina和vuex",
-                            link: "/articles/pina和vuex",
-                        },
+                        { text: "test01", link: "/blog/test01" },
+                        { text: "test02", link: "/blog/test02" },
                     ],
                 },
             ],

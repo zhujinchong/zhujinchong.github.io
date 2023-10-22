@@ -10,12 +10,14 @@ yarn build
 # 进入生成的文件夹
 cd docs/.vitepress/dist
 
+git checkout -b blog
 git init
 git add -A
-git commit -m 'add'
+git commit -m 'deploy'
 
 # git push -f git@github.com:你的git名/你的git项目名.git master:你的git分支
-git push -f git@github.com:mingriyingying/mingriyingying.github.io.git master
+git push -f git@github.com:mingriyingying/mingriyingying.github.io.git master:blog
 
 
 cd -
+git checkout -b master
