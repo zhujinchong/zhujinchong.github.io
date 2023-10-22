@@ -1,31 +1,42 @@
 export default {
     title: "明日盈盈",
-    description: '一个vue3组件库',//mate标签description，多用于搜索引擎抓取摘要
-    // base: "/notes/", // 根目录
+    description: '一只程序猿', //mate标签description，多用于搜索引擎抓取摘要
+    base: "/", // / 或者 /xxx/
+    head: [
+        ['link', { rel: 'icon', href: '/home.svg' }], // 网站icon
+    ],
     themeConfig: {
-        // 导航栏左侧：logo和title
-        logo: "/vitepress/home.svg",
-        siteTitle: "Home",
-        // 导航栏右侧：菜单
+        logo: "/home.svg",  // 导航栏最左侧logo
+        siteTitle: "Home", // 导航栏最左侧title
         nav: [
-            { text: "博客", link: "/blog/" },
-            { text: "Java", link: "/java/" }
+            // 一级菜单
+            {
+                text: "博客",
+                // 二级菜单
+                items: [
+                    { text: 'test01', link: '/articles/blog/test/' },
+                    { text: 'test02', link: '/articles/blog/test02' },
+                ]
+            },
+            // 一级菜单
+            { text: "test", link: "/articles/test/" }
         ],
-        // 导航栏最右侧：社交链接
+        // 导航栏右侧：社交链接
         socialLinks: [
-            { icon: "github", link: "https://gitee.com/geeksdidi" },
+            { icon: "github", link: "https://github.com/mingriyingying" },
         ],
-        // 侧边栏：首页不要侧边栏；特定页面才有的侧边栏
+        // 侧边栏：指定菜单及对应的侧边栏
         sidebar: {
-            "/blog/": [
+            "/articles/blog/test": [
                 {
                     text: "Test",
                     items: [
-                        { text: "test01", link: "/blog/test01" },
-                        { text: "test02", link: "/blog/test02" },
+                        { text: "test01", link: "/articles/blog/test/test01" },
+                        { text: "test02", link: "/articles/blog/test/test02" },
                     ],
                 },
             ],
+
         },
     }
 }

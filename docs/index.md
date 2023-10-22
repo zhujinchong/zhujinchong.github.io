@@ -1,26 +1,29 @@
 ---
 layout: home
 
+title: 明日盈盈
+titleTemplate: Make each day count, Make learning a habit.
+
 hero:
-  name: Cherry的博客
-  text: 彩虹🌈软糖
-  tagline: 逆水行舟，不进则退
+  name: 
+  text: 明日盈盈
+  tagline: Make each day count, Make learning a habit.
   actions:
     - theme: brand
-      text: come on
-      link: /articles/组件库环境搭建
+      text: Home
+      link: /
     - theme: alt
       text: View on Github
-      link: https://github.com/zrtch
+      link: https://github.com/mingriyingying
 
 features:
   - icon: 🛠️
-    title: Another cool feature
-    details: Lorem ipsum...
+    title: Test
+    details: Loading...
   - icon: ⚡️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
+    title: Test
+    details: Loading...
   - icon: 🖖
-    title: Another cool feature
-    details: Lorem ipsum...
+    title: Test
+    details: Loading...
 ---
