@@ -1,29 +1,26 @@
 ---
 layout: home
 
-title: github
-titleTemplate: 明日盈盈的博客
-
 hero:
-  name: 明日盈盈的博客
-  text: </dev>
-  tagline: Make each day count, Make learning a habit.
+  name: Cherry的博客
+  text: 彩虹🌈软糖
+  tagline: 逆水行舟，不进则退
   actions:
     - theme: brand
-      text: 快速开始
-      link: /guide/
+      text: come on
+      link: /articles/组件库环境搭建
     - theme: alt
-      text: 在 Gitee 上查看
-      link: https://gitee.com/
+      text: View on Github
+      link: https://github.com/zrtch
 
 features:
-  - icon: ⚡️
-    title: vite + vue3
-    details: 两岸猿声啼不住，轻舟已过万重山
-  - icon: 🖖
-    title: 知新
-    details: 好记性不如烂笔头
   - icon: 🛠️
-    title: 温故
-    details: 书读百遍其义自见
+    title: Another cool feature
+    details: Lorem ipsum...
+  - icon: ⚡️
+    title: Simple and minimal, always
+    details: Lorem ipsum...
+  - icon: 🖖
+    title: Another cool feature
+    details: Lorem ipsum...
 ---
