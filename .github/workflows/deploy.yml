@@ -33,11 +33,11 @@ jobs:
           node-version: '18.x'
         
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
       # 运行构建脚本
       - name: Run Build Script
-        run: yarn build
+        run: npm run build
 
       # 部署到 GitHub Pages
       - name: Deploy
