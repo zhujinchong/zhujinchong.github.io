@@ -11,7 +11,7 @@ on:
     branches: 
       - master
 
-# 当前流程要执行的任务，可以是多个。[my_first_job]就是一个任务
+# 当前流程要执行的任务，可以是多个。
 jobs:
   prepare:
     name: Prepare
@@ -19,22 +19,12 @@ jobs:
     steps:
       - name: Clone Code
         uses: actions/checkout@v4
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    needs: prepare
-    steps:
+      
       - uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 18
       - run: yarn build
   
-  deploy:
-    name: deploy
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 要部署的文件夹，必填
