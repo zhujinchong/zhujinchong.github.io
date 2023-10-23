@@ -507,7 +507,9 @@ Github Actions则会自动构建发布：GitHub提供了服务器，我们把打
 略
 ```
 
-修改github actions权限
 
 
+修改github actions权限：项目仓库下的settings
+
+![image-20231023161555470](images/image-20231023161555470.png)
 
