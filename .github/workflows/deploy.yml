@@ -30,19 +30,14 @@ jobs:
           node-version: 18
       - run: yarn build
   
-  my_first_job:
-    # 任务的名称，不设置则默认my_first_job
-    name: build-and-deploy
-
-    # 运行所需要的虚拟机环境
+  deploy:
+    name: deploy
     runs-on: ubuntu-latest
     needs: build
-    # 每个任务下的运行步骤，短横杠 - 表示一个步骤，从上至下依次执行。
     steps:
-      # 部署到 GitHub Pages
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.RAN_ACTIONS_TOKEN }} // 配置在项目里的secrets
-          exclude_assets: ''
-          publish_dir: packages/docs/.vitepress/dist // 需要发布内容的路径
+          # 要部署的文件夹，必填
+          FOLDER: docs/.vuepress/dist
+          # 希望部署的分支，默认gh-pages
+          BRANCH: deploy
