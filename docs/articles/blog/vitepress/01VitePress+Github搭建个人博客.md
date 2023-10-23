@@ -548,3 +548,14 @@ jobs:
 试了好几种deploy部署脚本，终于成功了。
 
 ![image-20231023175506169](images/image-20231023175506169.png)
+
+
+
+不知道和这个有没有关系：在项目根目录下添加了.gitignore文件
+
+```
+node_modules
+package-lock.json
+docs/.vitepress/dist
+```
+
