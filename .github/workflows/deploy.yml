@@ -35,8 +35,8 @@ jobs:
       - name: Install dependencies
         run: npm install yarn -g
 
-      - name: yarn init
-      - name: yarn add -D vitepress
+      - run: yarn init
+      - run: yarn add -D vitepress
       # 运行构建脚本
       - name: Run Build Script
         run: yarn build
