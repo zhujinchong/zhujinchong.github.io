@@ -33,11 +33,13 @@ jobs:
           node-version: '18.x'
         
       - name: Install dependencies
-        run: npm install
+        run: npm install yarn -g
 
+      - name: yarn init
+      - name: yarn add -D vitepress
       # 运行构建脚本
       - name: Run Build Script
-        run: npm run build
+        run: yarn build
 
       # 部署到 GitHub Pages
       - name: Deploy
