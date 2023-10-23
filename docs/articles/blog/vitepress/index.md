@@ -1,1 +1,8 @@
 vitepress
+
+---
+
+sidebar: false 
+
+---
+

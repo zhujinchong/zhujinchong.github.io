@@ -1,3 +1,95 @@
+import mathjax3 from "markdown-it-mathjax3";
+
+const customElements = [
+    "math",
+    "maction",
+    "maligngroup",
+    "malignmark",
+    "menclose",
+    "merror",
+    "mfenced",
+    "mfrac",
+    "mi",
+    "mlongdiv",
+    "mmultiscripts",
+    "mn",
+    "mo",
+    "mover",
+    "mpadded",
+    "mphantom",
+    "mroot",
+    "mrow",
+    "ms",
+    "mscarries",
+    "mscarry",
+    "mscarries",
+    "msgroup",
+    "mstack",
+    "mlongdiv",
+    "msline",
+    "mstack",
+    "mspace",
+    "msqrt",
+    "msrow",
+    "mstack",
+    "mstack",
+    "mstyle",
+    "msub",
+    "msup",
+    "msubsup",
+    "mtable",
+    "mtd",
+    "mtext",
+    "mtr",
+    "munder",
+    "munderover",
+    "semantics",
+    "math",
+    "mi",
+    "mn",
+    "mo",
+    "ms",
+    "mspace",
+    "mtext",
+    "menclose",
+    "merror",
+    "mfenced",
+    "mfrac",
+    "mpadded",
+    "mphantom",
+    "mroot",
+    "mrow",
+    "msqrt",
+    "mstyle",
+    "mmultiscripts",
+    "mover",
+    "mprescripts",
+    "msub",
+    "msubsup",
+    "msup",
+    "munder",
+    "munderover",
+    "none",
+    "maligngroup",
+    "malignmark",
+    "mtable",
+    "mtd",
+    "mtr",
+    "mlongdiv",
+    "mscarries",
+    "mscarry",
+    "msgroup",
+    "msline",
+    "msrow",
+    "mstack",
+    "maction",
+    "semantics",
+    "annotation",
+    "annotation-xml",
+    "mjx-container",
+    "mjx-assistive-mml",
+];
+
 // Node.js 提供的文件系统模块（fs）和路径模块（path）
 const fs = require("fs");
 const path = require("path");
@@ -141,5 +233,40 @@ export default {
         ],
         // 侧边栏：指定菜单及对应的侧边栏
         sidebar: sidebarConfig,
-    }
+        // 大纲展示层级
+        outline: {
+            level: [1, 3]
+        },
+        // 博客下方显示链接：Edit this page on GitHub
+        editLink: {
+            pattern: 'https://github.com/mingriyingying/mingriyingying.github.io/blob/master/docs/:path',
+            text: 'Edit this page on GitHub'
+        },
+        // 博客下方显示lastupdated时间
+        lastUpdated: {
+            text: 'Updated at',
+            formatOptions: {
+                dateStyle: 'short',
+                timeStyle: 'medium'
+            }
+        },
+        // 博客下方
+        docFooter: {
+            prev: false,
+            next: false
+        }
+    },
+    // 支持latex公式
+    markdown: {
+        config: (md) => {
+            md.use(mathjax3);
+        },
+    },
+    vue: {
+        template: {
+            compilerOptions: {
+                isCustomElement: (tag) => customElements.includes(tag),
+            },
+        },
+    },
 }
