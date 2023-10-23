@@ -1,7 +1,5 @@
 # 项目搭建
 
-x
-
 ## 环境&项目初始化
 
 安装node.js
@@ -501,10 +499,38 @@ export default {
 
 Github Actions则会自动构建发布：GitHub提供了服务器，我们把打包过程发至服务器中进行。
 
+
+
 首先创建配置文件，位置./.github/workflows/deploy.yml。
 
 ```
-略
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
+
 ```
 
 
@@ -513,3 +539,12 @@ Github Actions则会自动构建发布：GitHub提供了服务器，我们把打
 
 ![image-20231023161555470](images/image-20231023161555470.png)
 
+上传代码。等部署成功后，就可以切换page的分支。
+
+![image-20231023175405698](images/image-20231023175405698.png)
+
+
+
+试了好几种deploy部署脚本，终于成功了。
+
+![image-20231023175506169](images/image-20231023175506169.png)
