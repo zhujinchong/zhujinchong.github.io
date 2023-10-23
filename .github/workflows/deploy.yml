@@ -13,34 +13,32 @@ on:
 
 # 当前流程要执行的任务，可以是多个。[my_first_job]就是一个任务
 jobs:
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Code
+        uses: actions/checkout@v4
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - uses: DerYeger/yarn-setup-action@master
+        with:
+          node-version: 18
+      - run: yarn build
+  
   my_first_job:
     # 任务的名称，不设置则默认my_first_job
     name: build-and-deploy
 
     # 运行所需要的虚拟机环境
     runs-on: ubuntu-latest
-
+    needs: build
     # 每个任务下的运行步骤，短横杠 - 表示一个步骤，从上至下依次执行。
     steps:
-      # clone 该仓库的源码到工作流中
-      - name: Clone Code
-        uses: actions/checkout@v4
-
-      # 安装 Node 环境
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-        
-      - name: Install dependencies
-        run: npm install yarn -g
-
-      - run: yarn init
-      - run: yarn add -D vitepress
-      # 运行构建脚本
-      - name: Run Build Script
-        run: yarn build
-
       # 部署到 GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
