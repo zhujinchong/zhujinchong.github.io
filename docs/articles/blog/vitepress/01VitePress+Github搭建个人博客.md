@@ -495,8 +495,11 @@ export default {
 
 参考：https://juejin.cn/post/7245980207315861562#heading-9
 
+参考2：https://cloud.tencent.com/developer/article/2339135
+
 按照上面流程，我们开发完需要将**项目代码**提交至github的主分支，然后再将**打包代码**提交至deploy分支。
 
 Github Actions则会自动构建发布：GitHub提供了服务器，我们把打包过程发至服务器中进行。
 
 首先创建配置文件，位置./.github/workflows/deploy.yml。
+
