@@ -503,3 +503,11 @@ Github Actions则会自动构建发布：GitHub提供了服务器，我们把打
 
 首先创建配置文件，位置./.github/workflows/deploy.yml。
 
+```
+略
+```
+
+修改github actions权限
+
+
+
