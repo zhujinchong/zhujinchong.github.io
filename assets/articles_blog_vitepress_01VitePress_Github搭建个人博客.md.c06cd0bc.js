@@ -1,4 +1,4 @@
-import{_ as s,o as n,c as a,Q as e}from"./chunks/framework.2516552c.js";const l="/assets/image-20231022215614585.4141b045.png",p="/assets/image-20231022225823512.30f77a05.png",t="/assets/image-20231022230259032.bfc93074.png",o="/assets/image-20231022230523314.1ff16217.png",c="/assets/image-20231022231037344.50f5f8a1.png",i="/assets/image-20231022233357679.67eb4a91.png",r="/assets/image-20231022232206983.70041b2f.png",y="/assets/image-20231022232556611.1f4c8e5a.png",d="/assets/image-20231022232730618.02dee0e5.png",u="/assets/image-20231022233221763.81c44fcb.png",g="/assets/image-20231022233926480.764d27e9.png",h="/assets/image-20231023161555470.c5fc37e8.png",P=JSON.parse('{"title":"项目搭建","description":"","frontmatter":{},"headers":[],"relativePath":"articles/blog/vitepress/01VitePress+Github搭建个人博客.md","filePath":"articles/blog/vitepress/01VitePress+Github搭建个人博客.md"}'),m={name:"articles/blog/vitepress/01VitePress+Github搭建个人博客.md"},v=e(`<h1 id="项目搭建" tabindex="-1">项目搭建 <a class="header-anchor" href="#项目搭建" aria-label="Permalink to &quot;项目搭建&quot;">​</a></h1><p>x</p><h2 id="环境-项目初始化" tabindex="-1">环境&amp;项目初始化 <a class="header-anchor" href="#环境-项目初始化" aria-label="Permalink to &quot;环境&amp;项目初始化&quot;">​</a></h2><p>安装node.js</p><p>安装git</p><p>创建项目</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;"># 创建文件夹</span></span>
+import{_ as s,o as n,c as a,Q as e}from"./chunks/framework.2516552c.js";const l="/assets/image-20231022215614585.4141b045.png",p="/assets/image-20231022225823512.30f77a05.png",o="/assets/image-20231022230259032.bfc93074.png",t="/assets/image-20231022230523314.1ff16217.png",c="/assets/image-20231022231037344.50f5f8a1.png",i="/assets/image-20231022233357679.67eb4a91.png",r="/assets/image-20231022232206983.70041b2f.png",y="/assets/image-20231022232556611.1f4c8e5a.png",d="/assets/image-20231022232730618.02dee0e5.png",u="/assets/image-20231022233221763.81c44fcb.png",g="/assets/image-20231022233926480.764d27e9.png",h="/assets/image-20231023161555470.c5fc37e8.png",m="/assets/image-20231023175405698.b862dcff.png",v="/assets/image-20231023175506169.6088b6d3.png",$=JSON.parse('{"title":"项目搭建","description":"","frontmatter":{},"headers":[],"relativePath":"articles/blog/vitepress/01VitePress+Github搭建个人博客.md","filePath":"articles/blog/vitepress/01VitePress+Github搭建个人博客.md"}'),f={name:"articles/blog/vitepress/01VitePress+Github搭建个人博客.md"},q=e(`<h1 id="项目搭建" tabindex="-1">项目搭建 <a class="header-anchor" href="#项目搭建" aria-label="Permalink to &quot;项目搭建&quot;">​</a></h1><h2 id="环境-项目初始化" tabindex="-1">环境&amp;项目初始化 <a class="header-anchor" href="#环境-项目初始化" aria-label="Permalink to &quot;环境&amp;项目初始化&quot;">​</a></h2><p>安装node.js</p><p>安装git</p><p>创建项目</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;"># 创建文件夹</span></span>
 <span class="line"><span style="color:#e1e4e8;">mkdir zjc_vite &amp; cd zjc_vite</span></span>
 <span class="line"><span style="color:#e1e4e8;"></span></span>
 <span class="line"><span style="color:#e1e4e8;"># 全局安装yarn</span></span>
@@ -116,7 +116,7 @@ import{_ as s,o as n,c as a,Q as e}from"./chunks/framework.2516552c.js";const l=
 <span class="line"><span style="color:#24292e;">        logo: &quot;/home.svg&quot;,  // 导航栏最左侧logo</span></span>
 <span class="line"><span style="color:#24292e;">        siteTitle: &quot;Home&quot;, // 导航栏最左侧title</span></span>
 <span class="line"><span style="color:#24292e;">    }</span></span>
-<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><p><img src="`+t+`" alt="image-20231022230259032"></p><p>定义菜单</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">export default {</span></span>
+<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><p><img src="`+o+`" alt="image-20231022230259032"></p><p>定义菜单</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">export default {</span></span>
 <span class="line"><span style="color:#e1e4e8;">    themeConfig: {</span></span>
 <span class="line"><span style="color:#e1e4e8;">        logo: &quot;/home.svg&quot;,  // 导航栏最左侧logo</span></span>
 <span class="line"><span style="color:#e1e4e8;">        siteTitle: &quot;Home&quot;, // 导航栏最左侧title</span></span>
@@ -152,7 +152,7 @@ import{_ as s,o as n,c as a,Q as e}from"./chunks/framework.2516552c.js";const l=
 <span class="line"><span style="color:#24292e;">            { text: &quot;test&quot;, link: &quot;/articles/test/&quot; }</span></span>
 <span class="line"><span style="color:#24292e;">        ]</span></span>
 <span class="line"><span style="color:#24292e;">    }</span></span>
-<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><p><img src="`+o+`" alt="image-20231022230523314"></p><p>定义侧边栏</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">export default {</span></span>
+<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><p><img src="`+t+`" alt="image-20231022230523314"></p><p>定义侧边栏</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">export default {</span></span>
 <span class="line"><span style="color:#e1e4e8;">        // 侧边栏：指定菜单及对应的侧边栏</span></span>
 <span class="line"><span style="color:#e1e4e8;">        sidebar: {</span></span>
 <span class="line"><span style="color:#e1e4e8;">            &quot;/articles/blog/test&quot;: [</span></span>
@@ -590,4 +590,54 @@ import{_ as s,o as n,c as a,Q as e}from"./chunks/framework.2516552c.js";const l=
 <span class="line"><span style="color:#24292e;">        // 侧边栏：指定菜单及对应的侧边栏</span></span>
 <span class="line"><span style="color:#24292e;">        sidebar: sidebarConfig,</span></span>
 <span class="line"><span style="color:#24292e;">    }</span></span>
-<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><h2 id="_3、利用github-actions自动部署" tabindex="-1">3、利用Github Actions自动部署 <a class="header-anchor" href="#_3、利用github-actions自动部署" aria-label="Permalink to &quot;3、利用Github Actions自动部署&quot;">​</a></h2><p>参考：<a href="https://juejin.cn/post/7245980207315861562#heading-9" target="_blank" rel="noreferrer">https://juejin.cn/post/7245980207315861562#heading-9</a></p><p>参考2：<a href="https://cloud.tencent.com/developer/article/2339135" target="_blank" rel="noreferrer">https://cloud.tencent.com/developer/article/2339135</a></p><p>按照上面流程，我们开发完需要将<strong>项目代码</strong>提交至github的主分支，然后再将<strong>打包代码</strong>提交至deploy分支。</p><p>Github Actions则会自动构建发布：GitHub提供了服务器，我们把打包过程发至服务器中进行。</p><p>首先创建配置文件，位置./.github/workflows/deploy.yml。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">略</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">略</span></span></code></pre></div><p>修改github actions权限：项目仓库下的settings</p><p><img src="`+h+'" alt="image-20231023161555470"></p>',78),q=[v];function f(b,k,L,x,N,_){return n(),a("div",null,q)}const S=s(m,[["render",f]]);export{P as __pageData,S as default};
+<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><h2 id="_3、利用github-actions自动部署" tabindex="-1">3、利用Github Actions自动部署 <a class="header-anchor" href="#_3、利用github-actions自动部署" aria-label="Permalink to &quot;3、利用Github Actions自动部署&quot;">​</a></h2><p>参考：<a href="https://juejin.cn/post/7245980207315861562#heading-9" target="_blank" rel="noreferrer">https://juejin.cn/post/7245980207315861562#heading-9</a></p><p>参考2：<a href="https://cloud.tencent.com/developer/article/2339135" target="_blank" rel="noreferrer">https://cloud.tencent.com/developer/article/2339135</a></p><p>按照上面流程，我们开发完需要将<strong>项目代码</strong>提交至github的主分支，然后再将<strong>打包代码</strong>提交至deploy分支。</p><p>Github Actions则会自动构建发布：GitHub提供了服务器，我们把打包过程发至服务器中进行。</p><p>首先创建配置文件，位置./.github/workflows/deploy.yml。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">name: Deploy</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">on:</span></span>
+<span class="line"><span style="color:#e1e4e8;">  push:</span></span>
+<span class="line"><span style="color:#e1e4e8;">    branches:</span></span>
+<span class="line"><span style="color:#e1e4e8;">      - master</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">jobs:</span></span>
+<span class="line"><span style="color:#e1e4e8;">  deploy:</span></span>
+<span class="line"><span style="color:#e1e4e8;">    runs-on: ubuntu-latest</span></span>
+<span class="line"><span style="color:#e1e4e8;">    steps:</span></span>
+<span class="line"><span style="color:#e1e4e8;">      - uses: actions/checkout@v3</span></span>
+<span class="line"><span style="color:#e1e4e8;">      - uses: actions/setup-node@v3</span></span>
+<span class="line"><span style="color:#e1e4e8;">        with:</span></span>
+<span class="line"><span style="color:#e1e4e8;">          node-version: 16</span></span>
+<span class="line"><span style="color:#e1e4e8;">          cache: yarn</span></span>
+<span class="line"><span style="color:#e1e4e8;">      - run: yarn install --frozen-lockfile</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">      - name: Build</span></span>
+<span class="line"><span style="color:#e1e4e8;">        run: yarn build</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">      - name: Deploy</span></span>
+<span class="line"><span style="color:#e1e4e8;">        uses: peaceiris/actions-gh-pages@v3</span></span>
+<span class="line"><span style="color:#e1e4e8;">        with:</span></span>
+<span class="line"><span style="color:#e1e4e8;">          github_token: \${{ secrets.GITHUB_TOKEN }}</span></span>
+<span class="line"><span style="color:#e1e4e8;">          publish_dir: docs/.vitepress/dist</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">name: Deploy</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">on:</span></span>
+<span class="line"><span style="color:#24292e;">  push:</span></span>
+<span class="line"><span style="color:#24292e;">    branches:</span></span>
+<span class="line"><span style="color:#24292e;">      - master</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">jobs:</span></span>
+<span class="line"><span style="color:#24292e;">  deploy:</span></span>
+<span class="line"><span style="color:#24292e;">    runs-on: ubuntu-latest</span></span>
+<span class="line"><span style="color:#24292e;">    steps:</span></span>
+<span class="line"><span style="color:#24292e;">      - uses: actions/checkout@v3</span></span>
+<span class="line"><span style="color:#24292e;">      - uses: actions/setup-node@v3</span></span>
+<span class="line"><span style="color:#24292e;">        with:</span></span>
+<span class="line"><span style="color:#24292e;">          node-version: 16</span></span>
+<span class="line"><span style="color:#24292e;">          cache: yarn</span></span>
+<span class="line"><span style="color:#24292e;">      - run: yarn install --frozen-lockfile</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">      - name: Build</span></span>
+<span class="line"><span style="color:#24292e;">        run: yarn build</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">      - name: Deploy</span></span>
+<span class="line"><span style="color:#24292e;">        uses: peaceiris/actions-gh-pages@v3</span></span>
+<span class="line"><span style="color:#24292e;">        with:</span></span>
+<span class="line"><span style="color:#24292e;">          github_token: \${{ secrets.GITHUB_TOKEN }}</span></span>
+<span class="line"><span style="color:#24292e;">          publish_dir: docs/.vitepress/dist</span></span></code></pre></div><p>修改github actions权限：项目仓库下的settings</p><p><img src="`+h+'" alt="image-20231023161555470"></p><p>上传代码。等部署成功后，就可以切换page的分支。</p><p><img src="'+m+'" alt="image-20231023175405698"></p><p>试了好几种deploy部署脚本，终于成功了。</p><p><img src="'+v+'" alt="image-20231023175506169"></p>',81),b=[q];function k(L,x,N,_,C,P){return n(),a("div",null,b)}const j=s(f,[["render",k]]);export{$ as __pageData,j as default};
