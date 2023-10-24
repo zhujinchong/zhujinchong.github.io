@@ -27,10 +27,10 @@ Google DeepMind与Google Research的研究人员推出了一个全新的多语�
 
 
 
-Table 4: Evaluation scores on WMT (depicted as <bleu> / <chrf>) for the MT models compared against NLLB-54B.
+Table 4: Evaluation scores on WMT (depicted as `<bleu>` / `<chrf>`) for the MT models compared against NLLB-54B.
 
 ![image-20231018144617369](images/image-20231018144617369.png)
 
-Table 5: Evaluation scores on Flores-200 (depicted as <bleu> / <chrf>) for the MT models compared against NLLB-54B. All metrics are computed with the sacrebleu reference implementation.
+Table 5: Evaluation scores on Flores-200 (depicted as `<bleu>` / `<chrf>`) for the MT models compared against NLLB-54B. All metrics are computed with the sacrebleu reference implementation.
 
 ![image-20231018144633271](images/image-20231018144633271.png)
