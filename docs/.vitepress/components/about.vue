@@ -4,7 +4,7 @@ const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 <template>
     <div class="home-wrapper">
         <div class="my-profile">
-            <img src="/img/home.png" alt="Avatar">
+            <img src="/img/profile1.png" alt="Avatar">
         </div>
         <div class="my-title">Jinchong</div>
         <div class="my-tagline">Make each day count, Make learning a habit.</div>
