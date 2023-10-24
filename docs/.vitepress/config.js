@@ -132,6 +132,7 @@ function generateNavConfig2(articlesPath) {
             navConfigList.push(tmpNav)
         }
     })
+    navConfigList.push({ text: "About", link: "/about/" })
     return navConfigList
 }
 
@@ -225,13 +226,9 @@ export default {
         ['link', { rel: 'icon', href: '/img/home.svg' }], // 网站icon
     ],
     themeConfig: {
-        logo: "/img/home.png",  // 导航栏最左侧logo
+        // logo: "/img/home.png",  // 导航栏最左侧logo
         siteTitle: "Home", // 导航栏最左侧title
         nav: navConfig,
-        // 导航栏右侧：社交链接
-        socialLinks: [
-            { icon: "github", link: "https://github.com/mingriyingying" },
-        ],
         // 侧边栏：指定菜单及对应的侧边栏
         sidebar: sidebarConfig,
         // 大纲展示层级
