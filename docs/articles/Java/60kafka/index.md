@@ -79,7 +79,7 @@ Consumer从Broker读取消息，并记录自己的offset+1，以方便下次从o
 
 ![image-20220419135750379](images/image-20220419135750379.png)
 
-<img src="images/image-20220419140755085.png" />
+![image-20220419135750379](images/image-20220419140755085.png)
 
 **log日志文件**
 
