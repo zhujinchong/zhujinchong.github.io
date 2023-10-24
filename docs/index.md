@@ -1,9 +1,6 @@
 ---
 layout: home
 
-title: 明日盈盈
-titleTemplate: Make each day count, Make learning a habit.
-
 hero:
   name: 
   text: 明日盈盈

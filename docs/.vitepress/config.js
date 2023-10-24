@@ -218,6 +218,7 @@ const sidebarConfig = generateSidebarConfig2(articlesPath);
 
 export default {
     title: "明日盈盈",
+    titleTemplate: "Make each day count, Make learning a habit.",
     description: '一只程序猿', //mate标签description，多用于搜索引擎抓取摘要
     base: "/", // / 或者 /xxx/
     head: [
