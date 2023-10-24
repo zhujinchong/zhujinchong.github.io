@@ -4,8 +4,6 @@ Shaw在2018的提出的相对位置编码  https://www.cnblogs.com/shiyublog/p/1
 
 Transformer-XL在2019年中用到的相对位置编码 https://www.cnblogs.com/shiyublog/p/11236212.html 
 
----
-
 
 
 2019/1/9，《Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context》
