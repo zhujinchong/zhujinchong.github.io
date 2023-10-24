@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: |
+      - name: test
+        run: |
           git clone -b doc git@github.com:mingriyingying/mingriyingying.github.io.git
           cd mingriyingying.github.io.git
           pwd
