@@ -787,4 +787,3 @@ class MyThread implements Runnable {
 1. 打开cmd窗口，输入jps -l，查看代码进程号
 2. 再输入`jstack 进程号`查看堆栈信息，发现有死锁。
 
-![image-20220801235849747](../01Java并发/images/image-20220801235849747.png)
