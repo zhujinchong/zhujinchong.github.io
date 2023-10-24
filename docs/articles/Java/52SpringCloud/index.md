@@ -1169,7 +1169,7 @@ public interface ProductService {
 
 本来一个请求5ms搞定，如果此时使用了请求合并，还要等待10ms等待其他请求。但是，这点时间还是微不足道的。
 
-<img src="images/image-20220615234112076.png" alt="image-20220615234112076" />
+![image-20230320232050611](images/image-20220615234112076.png)
 
 
 

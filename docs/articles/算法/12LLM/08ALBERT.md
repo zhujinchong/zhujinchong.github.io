@@ -51,7 +51,7 @@ ALBERT提出了三种优化策略：
 
 跨层参数共享，就是不管12层还是24层都只用一个transformer，然后循环。（这个观点来自论文：Universal Transformers）
 
-<img src="images/v2-c4d5761a83544bfcc5eaffb266d92e8d_hd.jpg" alt="img" style="zoom: 50%;" />
+![image-20230320232050611](images/v2-c4d5761a83544bfcc5eaffb266d92e8d_hd.jpg)
 
 
 
