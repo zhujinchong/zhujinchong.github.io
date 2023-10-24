@@ -9,7 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: test
+        uses: actions/checkout@v3
         run: |
           pwd
           ll
