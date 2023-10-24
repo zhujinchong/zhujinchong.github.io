@@ -11,8 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
+          git clone -b doc git@github.com:mingriyingying/mingriyingying.github.io.git
+          cd mingriyingying.github.io.git
           pwd
-          ll
+          ls
           
       - uses: actions/setup-node@v3
         with:
