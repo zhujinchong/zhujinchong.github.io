@@ -127,4 +127,7 @@ export default {
 
 latex测试
 
+> F = \sum_{n=-\infty}^{\infty}\left|\mathscr{F}\left[f(x)\right]\right|^{2}\Delta x
+
 $$F = \sum_{n=-\infty}^{\infty}\left|\mathscr{F}\left[f(x)\right]\right|^{2}\Delta x$$
+
