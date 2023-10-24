@@ -408,7 +408,7 @@ Pipeline定义有两种方式：
 
 图中有Pipeline语法，在这里可以选择插件生成命令
 
-<img src="images/image-20230320235543233.png" alt="image-20230320235543233" style="zoom:25%;" />
+![image-20230320232050611](images/image-20230320235543233.png)
 
 在这里配置好，然后生成命令
 
