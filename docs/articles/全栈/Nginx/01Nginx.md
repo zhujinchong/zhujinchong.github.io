@@ -4,7 +4,7 @@
 
 1、从官网下载源码
 
-http://nginx.org/en/download.html
+`http://nginx.org/en/download.html`
 
 
 
@@ -51,7 +51,7 @@ make install
 
 配置文件位置 `conf/nginx.conf` 
 
-参考：https://www.runoob.com/w3cnote/nginx-setup-intro.html
+参考：`https://www.runoob.com/w3cnote/nginx-setup-intro.html`
 
 
 
@@ -177,7 +177,7 @@ sophos/nginx-vts-exporter:0.10.3
 docker run  -tid -p 9913:9913 --rm --env NGINX_STATUS="http://xxxxx/status/format/json" sophos/nginx-vts-exporter
 ```
 
-访问http://localhost:9913/metrics进行确认
+访问`http://localhost:9913/metrics`进行确认
 
 
 
@@ -232,7 +232,7 @@ docker rm zjcprom
 docker run -d --name zjcprom -p 9090:9090 -v /usr/local/etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prome/prometheus
 ```
 
-测试地址：http://localhost:9090/
+测试地址：`http://localhost:9090/`
 
 ![image-20230721091244663](images/image-20230721091244663.png)
 
@@ -252,7 +252,7 @@ docker pull grafana/grafana:8.3.3
 docker run -d --name=grafana -p 3000:3000 grafana/grafana
 ```
 
-访问http://localhost:3000，默认用户名和密码为admin/admin
+访问`http://localhost:3000`，默认用户名和密码为admin/admin
 
 
 
@@ -268,9 +268,10 @@ docker run -d --name=grafana -p 3000:3000 grafana/grafana
 
 # 指标与计算方式
 
-
-
+```
 https://blog.csdn.net/chuanxincui/article/details/89361689
+
+```
 
 
 
