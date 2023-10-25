@@ -1,4 +1,4 @@
-import{_ as s,o as e,c as n,Q as a}from"./chunks/framework.2516552c.js";const l="/assets/image-20210326211258056.9252b3e2.png",q=JSON.parse('{"title":"1  redis概述","description":"","frontmatter":{},"headers":[],"relativePath":"articles/Java/65redis/01redis基础.md","filePath":"articles/Java/65redis/01redis基础.md","lastUpdated":null}'),p={name:"articles/Java/65redis/01redis基础.md"},o=a(`<h1 id="_1-redis概述" tabindex="-1">1 redis概述 <a class="header-anchor" href="#_1-redis概述" aria-label="Permalink to &quot;1  redis概述&quot;">​</a></h1><p>redis是NOSQL系列的非关系型数据库；NOSQL表示not only sql，就是非关系型数据库。</p><p>非关系型数据库：</p><ul><li>存储的是key和value形式(redis)，还有文档形式(MongoDB)，等等。数据之间没有关系。</li><li>数据存储在内存中，提高检索效率（redis做缓存）</li></ul><p>redis应用场景：</p><ul><li>缓存（商品、新闻）</li><li>任务队列（车票、抢购）</li><li>排行榜</li><li>等等</li></ul><p>redis的数据结构：redis存储的是键值对，其中key都是字符串，value有5中不同的数据结构</p><ul><li>字符串类型 string</li><li>哈希类型 hash：</li><li>列表类型 list</li><li>集合类型 set</li><li>有序集合类型 sortedset</li></ul><h1 id="_2-redis安装" tabindex="-1">2 redis安装 <a class="header-anchor" href="#_2-redis安装" aria-label="Permalink to &quot;2  redis安装&quot;">​</a></h1><p>下载从redis官方，或者redis中文网；解压后可以直接使用，其中的文件有：</p><ul><li>redis.windows.conf 配置文件</li><li>redis-server.exe 服务器端</li><li>redis-cli.exe 客户端（先打开服务器端，再打开客户端 自动连接）</li></ul><h1 id="_3-redis命令" tabindex="-1">3 redis命令 <a class="header-anchor" href="#_3-redis命令" aria-label="Permalink to &quot;3  redis命令&quot;">​</a></h1><ol><li><p>字符串</p><ul><li>存储<code>set key value</code></li><li>获取<code>get key</code></li><li>删除<code>del key</code></li></ul><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">set username zhangsan</span></span>
+import{_ as s,o as e,c as n,Q as a}from"./chunks/framework.2516552c.js";const l="/assets/image-20210326211258056.9252b3e2.png",q=JSON.parse('{"title":"1  redis概述","description":"","frontmatter":{},"headers":[],"relativePath":"articles/Java/65redis/index.md","filePath":"articles/Java/65redis/index.md","lastUpdated":null}'),p={name:"articles/Java/65redis/index.md"},o=a(`<h1 id="_1-redis概述" tabindex="-1">1 redis概述 <a class="header-anchor" href="#_1-redis概述" aria-label="Permalink to &quot;1  redis概述&quot;">​</a></h1><p>redis是NOSQL系列的非关系型数据库；NOSQL表示not only sql，就是非关系型数据库。</p><p>非关系型数据库：</p><ul><li>存储的是key和value形式(redis)，还有文档形式(MongoDB)，等等。数据之间没有关系。</li><li>数据存储在内存中，提高检索效率（redis做缓存）</li></ul><p>redis应用场景：</p><ul><li>缓存（商品、新闻）</li><li>任务队列（车票、抢购）</li><li>排行榜</li><li>等等</li></ul><p>redis的数据结构：redis存储的是键值对，其中key都是字符串，value有5中不同的数据结构</p><ul><li>字符串类型 string</li><li>哈希类型 hash：</li><li>列表类型 list</li><li>集合类型 set</li><li>有序集合类型 sortedset</li></ul><h1 id="_2-redis安装" tabindex="-1">2 redis安装 <a class="header-anchor" href="#_2-redis安装" aria-label="Permalink to &quot;2  redis安装&quot;">​</a></h1><p>下载从redis官方，或者redis中文网；解压后可以直接使用，其中的文件有：</p><ul><li>redis.windows.conf 配置文件</li><li>redis-server.exe 服务器端</li><li>redis-cli.exe 客户端（先打开服务器端，再打开客户端 自动连接）</li></ul><h1 id="_3-redis命令" tabindex="-1">3 redis命令 <a class="header-anchor" href="#_3-redis命令" aria-label="Permalink to &quot;3  redis命令&quot;">​</a></h1><ol><li><p>字符串</p><ul><li>存储<code>set key value</code></li><li>获取<code>get key</code></li><li>删除<code>del key</code></li></ul><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">set username zhangsan</span></span>
 <span class="line"><span style="color:#e1e4e8;">get username</span></span>
 <span class="line"><span style="color:#e1e4e8;">del username</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">set username zhangsan</span></span>
 <span class="line"><span style="color:#24292e;">get username</span></span>
@@ -218,4 +218,92 @@ import{_ as s,o as e,c as n,Q as a}from"./chunks/framework.2516552c.js";const l=
 <span class="line"><span style="color:#e1e4e8;">// String json = new ObjectMapper().writeValueAsString(list);</span></span>
 <span class="line"><span style="color:#e1e4e8;">String json = provinceDao.findAll2();</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">// List&lt;Province&gt; list = provinceDao.findAll();</span></span>
 <span class="line"><span style="color:#24292e;">// String json = new ObjectMapper().writeValueAsString(list);</span></span>
-<span class="line"><span style="color:#24292e;">String json = provinceDao.findAll2();</span></span></code></pre></div></li></ol>`,36),t=[o];function i(c,r,d,u,y,g){return e(),n("div",null,t)}const h=s(p,[["render",i]]);export{q as __pageData,h as default};
+<span class="line"><span style="color:#24292e;">String json = provinceDao.findAll2();</span></span></code></pre></div></li></ol><h1 id="_7-单机和集群部署方式" tabindex="-1">7 单机和集群部署方式 <a class="header-anchor" href="#_7-单机和集群部署方式" aria-label="Permalink to &quot;7 单机和集群部署方式&quot;">​</a></h1><p>单机启动</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;"># 修改配置</span></span>
+<span class="line"><span style="color:#e1e4e8;">daemonize yes</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 后台启动</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-server redis.conf</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 访问</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-cli</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 退出</span></span>
+<span class="line"><span style="color:#e1e4e8;">quit</span></span>
+<span class="line"><span style="color:#e1e4e8;"># redis停止</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-cli shutdown</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;"># 修改配置</span></span>
+<span class="line"><span style="color:#24292e;">daemonize yes</span></span>
+<span class="line"><span style="color:#24292e;"># 后台启动</span></span>
+<span class="line"><span style="color:#24292e;">redis-server redis.conf</span></span>
+<span class="line"><span style="color:#24292e;"># 访问</span></span>
+<span class="line"><span style="color:#24292e;">redis-cli</span></span>
+<span class="line"><span style="color:#24292e;"># 退出</span></span>
+<span class="line"><span style="color:#24292e;">quit</span></span>
+<span class="line"><span style="color:#24292e;"># redis停止</span></span>
+<span class="line"><span style="color:#24292e;">redis-cli shutdown</span></span></code></pre></div><p>集群启动</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;"># 1. 解压</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 2. 编译和安装</span></span>
+<span class="line"><span style="color:#e1e4e8;">cd redis-5.0.6/</span></span>
+<span class="line"><span style="color:#e1e4e8;">make</span></span>
+<span class="line"><span style="color:#e1e4e8;">make install</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 安装完以后/usr/local/bin/下面有redis的脚本</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 3. 到/usr/local下创建redis-cluster, 并创建7个</span></span>
+<span class="line"><span style="color:#e1e4e8;">cd /usr/local/</span></span>
+<span class="line"><span style="color:#e1e4e8;">mkdir redis-cluster</span></span>
+<span class="line"><span style="color:#e1e4e8;">cd redis-cluster/</span></span>
+<span class="line"><span style="color:#e1e4e8;">mkdir 7000 7001 7002</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 4. 拷贝并修改配置到各个目录下</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;"># 配置========================</span></span>
+<span class="line"><span style="color:#e1e4e8;">bind 10.45.151.213 #IP  </span></span>
+<span class="line"><span style="color:#e1e4e8;">port 7000    #端口</span></span>
+<span class="line"><span style="color:#e1e4e8;">daemonize yes   #是否后台启动</span></span>
+<span class="line"><span style="color:#e1e4e8;">pidfile /var/run/redis_7000.pid #进程存放文件的地址（daemonize需要）</span></span>
+<span class="line"><span style="color:#e1e4e8;">logfile &quot;/usr/local/redis-cluster/7000/7000.log&quot; #日志文件</span></span>
+<span class="line"><span style="color:#e1e4e8;">save 900 1  #rdb存储</span></span>
+<span class="line"><span style="color:#e1e4e8;">appendonly yes #aof存储</span></span>
+<span class="line"><span style="color:#e1e4e8;">appendfilename &quot;appendonly.aof&quot;</span></span>
+<span class="line"><span style="color:#e1e4e8;">cluster-enabled yes  #是否是集群方式启动</span></span>
+<span class="line"><span style="color:#e1e4e8;">cluster-config-file nodes-7000.conf</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;"># 5. 启动各个redis</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-server 7000/redis.conf</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-server 7001/redis.conf</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-server 7002/redis.conf</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;"># 如果以前有过集群，请把各个目录下的配置文件、备份数据删除</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 6. 以前使用ruby搭建集群，现在直接用redis-cli：</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-cli --cluster create 10.45.151.213:7000 10.45.151.213:7001 10.45.151.213:7002 --cluster-replicas 1</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;"># 8. 连接，测试</span></span>
+<span class="line"><span style="color:#e1e4e8;">redis-cli -c -p 7000 -h 10.45.151.213</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;"># 1. 解压</span></span>
+<span class="line"><span style="color:#24292e;"># 2. 编译和安装</span></span>
+<span class="line"><span style="color:#24292e;">cd redis-5.0.6/</span></span>
+<span class="line"><span style="color:#24292e;">make</span></span>
+<span class="line"><span style="color:#24292e;">make install</span></span>
+<span class="line"><span style="color:#24292e;"># 安装完以后/usr/local/bin/下面有redis的脚本</span></span>
+<span class="line"><span style="color:#24292e;"># 3. 到/usr/local下创建redis-cluster, 并创建7个</span></span>
+<span class="line"><span style="color:#24292e;">cd /usr/local/</span></span>
+<span class="line"><span style="color:#24292e;">mkdir redis-cluster</span></span>
+<span class="line"><span style="color:#24292e;">cd redis-cluster/</span></span>
+<span class="line"><span style="color:#24292e;">mkdir 7000 7001 7002</span></span>
+<span class="line"><span style="color:#24292e;"># 4. 拷贝并修改配置到各个目录下</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;"># 配置========================</span></span>
+<span class="line"><span style="color:#24292e;">bind 10.45.151.213 #IP  </span></span>
+<span class="line"><span style="color:#24292e;">port 7000    #端口</span></span>
+<span class="line"><span style="color:#24292e;">daemonize yes   #是否后台启动</span></span>
+<span class="line"><span style="color:#24292e;">pidfile /var/run/redis_7000.pid #进程存放文件的地址（daemonize需要）</span></span>
+<span class="line"><span style="color:#24292e;">logfile &quot;/usr/local/redis-cluster/7000/7000.log&quot; #日志文件</span></span>
+<span class="line"><span style="color:#24292e;">save 900 1  #rdb存储</span></span>
+<span class="line"><span style="color:#24292e;">appendonly yes #aof存储</span></span>
+<span class="line"><span style="color:#24292e;">appendfilename &quot;appendonly.aof&quot;</span></span>
+<span class="line"><span style="color:#24292e;">cluster-enabled yes  #是否是集群方式启动</span></span>
+<span class="line"><span style="color:#24292e;">cluster-config-file nodes-7000.conf</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;"># 5. 启动各个redis</span></span>
+<span class="line"><span style="color:#24292e;">redis-server 7000/redis.conf</span></span>
+<span class="line"><span style="color:#24292e;">redis-server 7001/redis.conf</span></span>
+<span class="line"><span style="color:#24292e;">redis-server 7002/redis.conf</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;"># 如果以前有过集群，请把各个目录下的配置文件、备份数据删除</span></span>
+<span class="line"><span style="color:#24292e;"># 6. 以前使用ruby搭建集群，现在直接用redis-cli：</span></span>
+<span class="line"><span style="color:#24292e;">redis-cli --cluster create 10.45.151.213:7000 10.45.151.213:7001 10.45.151.213:7002 --cluster-replicas 1</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;"># 8. 连接，测试</span></span>
+<span class="line"><span style="color:#24292e;">redis-cli -c -p 7000 -h 10.45.151.213</span></span></code></pre></div>`,41),i=[o];function c(t,r,d,y,u,g){return e(),n("div",null,i)}const h=s(p,[["render",c]]);export{q as __pageData,h as default};
