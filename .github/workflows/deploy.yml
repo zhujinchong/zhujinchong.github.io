@@ -10,15 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository A
-        uses: actions/checkout@v3
+        run: git clone https://github.com/mingriyingying/mingriyingying.github.io.git
 
       - name: Clone Repository B
         run: git clone https://github.com/mingriyingying/zjc_notes.git temp-repo
 
       - name: Copy Repository B to Folder in Repository A
         run: |
+          pwd
+          ls
           rm -rf mingriyingying.github.io/docs/articles/*
-          mv temp-repo/articles/* mingriyingying.github.io/docs/articles
+          mv temp-repo/articles/* mingriyingying.github.io/docs/articles/
 
       - uses: actions/setup-node@v3
         with:
