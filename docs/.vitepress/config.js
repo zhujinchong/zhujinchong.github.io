@@ -132,7 +132,6 @@ function generateNavConfig2(articlesPath) {
             navConfigList.push(tmpNav)
         }
     })
-    navConfigList.push({ text: "About", link: "/about/" })
     return navConfigList
 }
 

@@ -9,7 +9,9 @@ const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     <div class="my-title">Jinchong</div>
     <div class="my-tagline">Make each day count, Make learning a habit.</div>
     <div class="my-links">
-      <div class="my-link"><img src="/img/envelope.svg" title="zhujinchong@gmail.com"></div>
+      <div class="my-link">
+        <a href="/about/" target="_blank"><img src="/img/envelope.svg"></a>
+      </div>
       <div class="my-link">
         <a href="https://github.com/mingriyingying" target="_blank"><img src="/img/github.svg"></a>
       </div>
