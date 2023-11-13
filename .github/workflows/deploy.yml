@@ -17,7 +17,7 @@ jobs:
       - name: Clone Repository B
         run: |
           cd ${{ github.workspace }}
-          git clone https://github.com/mingriyingying/zjc_notes.git temp-repo
+          git clone https://github.com/zhujinchong/zjc_notes.git temp-repo
 
       - name: Copy Repository B to Folder in Repository A
         run: |
