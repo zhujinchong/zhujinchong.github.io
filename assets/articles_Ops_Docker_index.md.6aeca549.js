@@ -58,7 +58,129 @@ import{_ as s,o as n,c as a,Q as e}from"./chunks/framework.2516552c.js";const l=
 <span class="line"><span style="color:#6A737D;"># 7、配置镜像加速，因为国内从docker hub官方仓库下载较慢</span></span>
 <span class="line"><span style="color:#D73A49;">*</span><span style="color:#24292E;"> 镜像从Docker Hub下载。</span></span>
 <span class="line"><span style="color:#D73A49;">*</span><span style="color:#24292E;"> 国内从Docker Hub获取镜像时会遇到困难，所以必须配置加速器。</span></span>
-<span class="line"><span style="color:#D73A49;">*</span><span style="color:#24292E;"> 阿里镜像加速器、免费、参考官方：https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</span></span></code></pre></div><p>阿里云镜像获取地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors%EF%BC%8C%E7%99%BB%E9%99%86%E5%90%8E%EF%BC%8C%E5%B7%A6%E4%BE%A7%E8%8F%9C%E5%8D%95%E9%80%89%E4%B8%AD%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%9C%B0%E5%9D%80%E4%BA%86%EF%BC%9A" target="_blank" rel="noreferrer">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors，登陆后，左侧菜单选中镜像加速器就可以看到你的专属地址了：</a></p><p><img src="`+p+`" alt="image-20230315225521290"></p><h1 id="_2-docker命令" tabindex="-1">2 Docker命令 <a class="header-anchor" href="#_2-docker命令" aria-label="Permalink to &quot;2  Docker命令&quot;">​</a></h1><h2 id="_2-1-docker服务命令" tabindex="-1">2.1 Docker服务命令 <a class="header-anchor" href="#_2-1-docker服务命令" aria-label="Permalink to &quot;2.1  Docker服务命令&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;"># 开启</span></span>
+<span class="line"><span style="color:#D73A49;">*</span><span style="color:#24292E;"> 阿里镜像加速器、免费、参考官方：https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</span></span></code></pre></div><p>阿里云镜像获取地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors%EF%BC%8C%E7%99%BB%E9%99%86%E5%90%8E%EF%BC%8C%E5%B7%A6%E4%BE%A7%E8%8F%9C%E5%8D%95%E9%80%89%E4%B8%AD%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%9C%B0%E5%9D%80%E4%BA%86%EF%BC%9A" target="_blank" rel="noreferrer">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors，登陆后，左侧菜单选中镜像加速器就可以看到你的专属地址了：</a></p><p><img src="`+p+`" alt="image-20230315225521290"></p><h2 id="附加-离线安装docker" tabindex="-1">附加：离线安装docker <a class="header-anchor" href="#附加-离线安装docker" aria-label="Permalink to &quot;附加：离线安装docker&quot;">​</a></h2><p>离线包下载地址：<a href="https://download.docker.com/linux/static/stable/x86_64/" target="_blank" rel="noreferrer">https://download.docker.com/linux/static/stable/x86_64/</a></p><p>安装步骤：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">tar -zxvf docker-20.10.9.tgz </span></span>
+<span class="line"><span style="color:#e1e4e8;">cp docker/* /usr/bin</span></span>
+<span class="line"><span style="color:#e1e4e8;"># rm -rf docker docker-20.10.9.tgz</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">tar -zxvf docker-20.10.9.tgz </span></span>
+<span class="line"><span style="color:#24292e;">cp docker/* /usr/bin</span></span>
+<span class="line"><span style="color:#24292e;"># rm -rf docker docker-20.10.9.tgz</span></span></code></pre></div><p>配置docker服务</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;"># vim /etc/systemd/system/docker.service</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 添加</span></span>
+<span class="line"><span style="color:#e1e4e8;">[Unit]</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">Description=Docker Application Container Engine</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">Documentation=https://docs.docker.com</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">After=network-online.target firewalld.service</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">Wants=network-online.target</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">[Service]</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">Type=notify</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">ExecStart=/usr/bin/dockerd</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">ExecReload=/bin/kill -s HUP $MAINPID</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">LimitNOFILE=infinity</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">LimitNPROC=infinity</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">TimeoutStartSec=0</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">Delegate=yes</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">KillMode=process</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">Restart=on-failure</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">StartLimitBurst=3</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">StartLimitInterval=60s</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">[Install]</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;">WantedBy=multi-user.target</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;"># vim /etc/systemd/system/docker.service</span></span>
+<span class="line"><span style="color:#24292e;"># 添加</span></span>
+<span class="line"><span style="color:#24292e;">[Unit]</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">Description=Docker Application Container Engine</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">Documentation=https://docs.docker.com</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">After=network-online.target firewalld.service</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">Wants=network-online.target</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">[Service]</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">Type=notify</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">ExecStart=/usr/bin/dockerd</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">ExecReload=/bin/kill -s HUP $MAINPID</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">LimitNOFILE=infinity</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">LimitNPROC=infinity</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">TimeoutStartSec=0</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">Delegate=yes</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">KillMode=process</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">Restart=on-failure</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">StartLimitBurst=3</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">StartLimitInterval=60s</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">[Install]</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;">WantedBy=multi-user.target</span></span></code></pre></div><p>赋执行权限</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">chmod +x /etc/systemd/system/docker.service</span></span>
+<span class="line"><span style="color:#e1e4e8;">systemctl daemon-reload</span></span>
+<span class="line"><span style="color:#e1e4e8;"></span></span>
+<span class="line"><span style="color:#e1e4e8;"># 开机启动</span></span>
+<span class="line"><span style="color:#e1e4e8;">systemctl enable docker.service</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 启动docker</span></span>
+<span class="line"><span style="color:#e1e4e8;">systemctl start docker</span></span>
+<span class="line"><span style="color:#e1e4e8;"># docker状态</span></span>
+<span class="line"><span style="color:#e1e4e8;">systemctl status docker</span></span>
+<span class="line"><span style="color:#e1e4e8;"># 重启docker服务</span></span>
+<span class="line"><span style="color:#e1e4e8;">systemctl restart docker</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">chmod +x /etc/systemd/system/docker.service</span></span>
+<span class="line"><span style="color:#24292e;">systemctl daemon-reload</span></span>
+<span class="line"><span style="color:#24292e;"></span></span>
+<span class="line"><span style="color:#24292e;"># 开机启动</span></span>
+<span class="line"><span style="color:#24292e;">systemctl enable docker.service</span></span>
+<span class="line"><span style="color:#24292e;"># 启动docker</span></span>
+<span class="line"><span style="color:#24292e;">systemctl start docker</span></span>
+<span class="line"><span style="color:#24292e;"># docker状态</span></span>
+<span class="line"><span style="color:#24292e;">systemctl status docker</span></span>
+<span class="line"><span style="color:#24292e;"># 重启docker服务</span></span>
+<span class="line"><span style="color:#24292e;">systemctl restart docker</span></span></code></pre></div><h2 id="附加-离线安装nvidia-docker-runtime" tabindex="-1">附加：离线安装nvidia-docker-runtime <a class="header-anchor" href="#附加-离线安装nvidia-docker-runtime" aria-label="Permalink to &quot;附加：离线安装nvidia-docker-runtime&quot;">​</a></h2><p>通过nvidia-docker-runtime，可以实现在docker容器内部使用nvidia的gpu 进行相关的模型训练和推理。</p><p>如命令</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">docker run --gpus &quot;device=1,2&quot;</span></span>
+<span class="line"><span style="color:#e1e4e8;">docker run --gpus all</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">docker run --gpus &quot;device=1,2&quot;</span></span>
+<span class="line"><span style="color:#24292e;">docker run --gpus all</span></span></code></pre></div><p>官方没有直接提供安装包，需要自己从linux仓库下载，或找别人下载好的安装包。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">#解压nvidia-container-runtime.tar.gz</span></span>
+<span class="line"><span style="color:#e1e4e8;">tar -zxvf nvidia-container-runtime.tar.gz</span></span>
+<span class="line"><span style="color:#e1e4e8;">#离线安装所有rpm包</span></span>
+<span class="line"><span style="color:#e1e4e8;">cd nvidia-container-runtime</span></span>
+<span class="line"><span style="color:#e1e4e8;">rpm -Uvh --force --nodeps *.rpm</span></span>
+<span class="line"><span style="color:#e1e4e8;">#安装完后需要重启容器，未设置为系统启动服务，也可以通过kill docker进程再启动方式重启</span></span>
+<span class="line"><span style="color:#e1e4e8;">systemctl restart docker</span></span>
+<span class="line"><span style="color:#e1e4e8;">#查看安装结果</span></span>
+<span class="line"><span style="color:#e1e4e8;">whereis  nvidia-container-runtime</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">#解压nvidia-container-runtime.tar.gz</span></span>
+<span class="line"><span style="color:#24292e;">tar -zxvf nvidia-container-runtime.tar.gz</span></span>
+<span class="line"><span style="color:#24292e;">#离线安装所有rpm包</span></span>
+<span class="line"><span style="color:#24292e;">cd nvidia-container-runtime</span></span>
+<span class="line"><span style="color:#24292e;">rpm -Uvh --force --nodeps *.rpm</span></span>
+<span class="line"><span style="color:#24292e;">#安装完后需要重启容器，未设置为系统启动服务，也可以通过kill docker进程再启动方式重启</span></span>
+<span class="line"><span style="color:#24292e;">systemctl restart docker</span></span>
+<span class="line"><span style="color:#24292e;">#查看安装结果</span></span>
+<span class="line"><span style="color:#24292e;">whereis  nvidia-container-runtime</span></span></code></pre></div><h1 id="_2-docker命令" tabindex="-1">2 Docker命令 <a class="header-anchor" href="#_2-docker命令" aria-label="Permalink to &quot;2  Docker命令&quot;">​</a></h1><h2 id="_2-1-docker服务命令" tabindex="-1">2.1 Docker服务命令 <a class="header-anchor" href="#_2-1-docker服务命令" aria-label="Permalink to &quot;2.1  Docker服务命令&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;"># 开启</span></span>
 <span class="line"><span style="color:#e1e4e8;">systemctl start docker</span></span>
 <span class="line"><span style="color:#e1e4e8;"># 关闭</span></span>
 <span class="line"><span style="color:#e1e4e8;">systemctl stop docker</span></span>
@@ -818,4 +940,4 @@ import{_ as s,o as n,c as a,Q as e}from"./chunks/framework.2516552c.js";const l=
 <span class="line"><span style="color:#24292e;">dokcer-compose config -q  # 检查配置，有问题才有输出</span></span>
 <span class="line"><span style="color:#24292e;">docker-compose restart   # 重启服务</span></span>
 <span class="line"><span style="color:#24292e;">docker-compose start     # 启动服务</span></span>
-<span class="line"><span style="color:#24292e;">docker-compose stop      # 停止服务</span></span></code></pre></div><h1 id="_9-可视化工具" tabindex="-1">9 可视化工具 <a class="header-anchor" href="#_9-可视化工具" aria-label="Permalink to &quot;9 可视化工具&quot;">​</a></h1><p>介绍两个：</p><ul><li>轻量级：Portainer</li><li>重量级：CAdvisor监控收集数据+InfluxDB存储数据+Granfana展示图标 <ul><li>CAdvisor：容器资源监控工具，包括CUP、磁盘、网络、内存等。默认存储2分钟。</li><li>InfluxDB：开源分布式时序、事件和指标数据库，无需外部依赖。</li><li>Granfana：开源可视化平台，支持多种数据源：InfluxDB, MySQL, ES等。</li></ul></li></ul><p>其中CIG三剑客可以直接docker编排安装。略。</p>`,201),E=[h];function g(b,v,F,C,_,q){return n(),a("div",null,E)}const A=s(m,[["render",g]]);export{f as __pageData,A as default};
+<span class="line"><span style="color:#24292e;">docker-compose stop      # 停止服务</span></span></code></pre></div><h1 id="_9-可视化工具" tabindex="-1">9 可视化工具 <a class="header-anchor" href="#_9-可视化工具" aria-label="Permalink to &quot;9 可视化工具&quot;">​</a></h1><p>介绍两个：</p><ul><li>轻量级：Portainer</li><li>重量级：CAdvisor监控收集数据+InfluxDB存储数据+Granfana展示图标 <ul><li>CAdvisor：容器资源监控工具，包括CUP、磁盘、网络、内存等。默认存储2分钟。</li><li>InfluxDB：开源分布式时序、事件和指标数据库，无需外部依赖。</li><li>Granfana：开源可视化平台，支持多种数据源：InfluxDB, MySQL, ES等。</li></ul></li></ul><p>其中CIG三剑客可以直接docker编排安装。略。</p>`,215),E=[h];function g(b,v,F,C,q,_){return n(),a("div",null,E)}const A=s(m,[["render",g]]);export{f as __pageData,A as default};
