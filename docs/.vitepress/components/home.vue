@@ -6,9 +6,9 @@ const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     <div class="my-profile">
       <img src="/img/profile1.png" alt="Avatar">
     </div>
-    <div class="my-title">Jinchong</div>
+    <div class="my-title"><a href="https://github.com/zhujinchong" target="_blank">Jinchong</a></div>
     <div class="my-tagline">Make each day count, Make learning a habit.</div>
-    <div class="my-links">
+    <!-- <div class="my-links">
       <div class="my-link">
         <a href="https://github.com/zhujinchong" target="_blank"><img src="/img/github.svg"></a>
       </div>
@@ -20,7 +20,7 @@ const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
       <div class="my-link">
         <a href="/about/" target="_blank"><img src="/img/envelope.svg"></a>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <style>
