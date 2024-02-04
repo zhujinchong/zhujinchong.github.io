@@ -26,9 +26,9 @@ jobs:
           mv temp-repo/articles/* docs/articles/
 
       - name: Setup Node.js (yarn)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           cache: yarn
       
       - name: Yarn Install
